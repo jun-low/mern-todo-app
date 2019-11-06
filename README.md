@@ -1,4 +1,4 @@
-#MERN stack todo-list
+# MERN-stack todo task manager📌
 
 A dockerize full-stack web application with user login/signup features and deployed on google cloud platform.
 
