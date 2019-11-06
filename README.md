@@ -1,6 +1,8 @@
-# MERN-stack todo task manager📌
+# MERN-stack todo task manager 📌
 
 A dockerize full-stack web application with user login/signup features and deployed on google cloud platform.
+
+##### [LIVE DEMO](https://todo-app-258100.appspot.com/)
 
 ## Prerequisites
 - Node installed from [here](https://nodejs.org/en/download/).
