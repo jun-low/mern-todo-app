@@ -4,7 +4,7 @@ A dockerize full-stack web application with user login/signup features and deplo
 
 ##### [LIVE DEMO](https://todo-app-258100.appspot.com/)
 
-## Prerequisites
+## Pre-requisites
 - Node installed from [here](https://nodejs.org/en/download/).
 - NPM installed from [here](https://www.npmjs.com/get-npm).
 - MongoDB installed from [here](https://docs.mongodb.com/manual/administration/install-community/).
@@ -14,7 +14,7 @@ A dockerize full-stack web application with user login/signup features and deplo
 
 ### `yarn install`
 
-Install all dependencies for a project.
+Install all dependencies for the project.
 
 ### `yarn start`
 
@@ -40,7 +40,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 * [Axios](https://github.com/mzabriskie/axios), promise based HTTP client for the browser and node.js
 * [Nodemon](https://nodemon.io/), an auto-refresh the server on code change
 * [Bcrypt](https://github.com/dcodeIO/bcrypt.js/blob/master/README.md), user's password hashing function.
-* [](http://www.passportjs.org/docs/authenticate/) for user authentication.
+* [Passport](http://www.passportjs.org/docs/authenticate/) a middleware for user authentication.
 
 * [MongoDB](https://www.mongodb.com/) is a NoSQL database with the scalability and flexibility.
 * [Mongoose](http://mongoosejs.com/), a Mongodb object modeling for Node.js
