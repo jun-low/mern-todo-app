@@ -1,8 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#MERN stack todo-list
 
-## Available Scripts
+A dockerize full-stack web application with user login/signup features and deployed on google cloud platform.
 
-In the project directory, you can run:
+## Prerequisites
+- Node installed from [here](https://nodejs.org/en/download/).
+- NPM installed from [here](https://www.npmjs.com/get-npm).
+- MongoDB installed from [here](https://docs.mongodb.com/manual/administration/install-community/).
+- Reactjs installed from [here](https://reactjs.org/docs/getting-started.html).
+
+## Getting Started
+
+### `yarn install`
+
+Install all dependencies for a project.
 
 ### `yarn start`
 
@@ -37,32 +47,18 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Build with
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* [Redux](https://redux.js.org/) for state management between React components.
+* [Materializecss](https://materializecss.com/) to create responsive front-end framework based on Material Design.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [NodeJs](https://nodejs.org/en/), a backend-side JavaScript runtime environment.
+* [Express](https://expressjs.com/) , a lightweight minimalist web framework for Node.js.
+* [Axios](https://github.com/mzabriskie/axios), promise based HTTP client for the browser and node.js
+* [Nodemon](https://nodemon.io/), an auto-refresh the server on code change
+* [Bcrypt](https://github.com/dcodeIO/bcrypt.js/blob/master/README.md), user's password hashing function.
 
-### Code Splitting
+* [MongoDB](https://www.mongodb.com/) is a NoSQL database with the scalability and flexibility.
+* [Mongoose](http://mongoosejs.com/), a Mongodb object modeling for Node.js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
