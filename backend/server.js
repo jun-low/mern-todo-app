@@ -17,7 +17,8 @@ const User = require("./models/User");
 const Todo = require("./models/Todo");
 
 const app = express();
-app.use(cors());
+todoRoutes.options('*', cors());
+userRoutes.options('*', cors());
 app.use(
   bodyParser.urlencoded({
     extended: false
@@ -182,6 +183,7 @@ userRoutes.post("/login", (req, res) => {
 
 app.use('/todos', todoRoutes);
 app.use('/users', userRoutes);
+app.use(cors());
 
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
