@@ -15,10 +15,17 @@ class Login extends Component {
     };
   }
 
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/");
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
       this.props.history.push("/");
     }
+
     if (nextProps.errors) {
       this.setState({
         errors: nextProps.errors
@@ -28,15 +35,17 @@ class Login extends Component {
 
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
-  }
+  };
 
   onSubmit = e => {
     e.preventDefault();
+
     const userData = {
       email: this.state.email,
       password: this.state.password
     };
-  this.props.loginUser(userData);
+
+    this.props.loginUser(userData);
   };
 
   render() {

@@ -9,7 +9,7 @@ export default class DeleteTodo extends Component {
     }
 
     deleteTodo() {
-        axios.delete("http://localhost:4000/todos/delete/"+this.props.match.params.id)
+        axios.delete("/todos/delete/"+this.props.match.params.id)
             .then(res => console.log("Todo successfully deleted!"));
 
         this.props.history.push("/");

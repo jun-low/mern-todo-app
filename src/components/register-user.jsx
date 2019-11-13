@@ -8,7 +8,6 @@ import classnames from "classnames";
 class Register extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       name: "",
       email: "",
@@ -16,6 +15,12 @@ class Register extends Component {
       password2: "",
       errors: {}
     };
+  }
+
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/");
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,13 +37,15 @@ class Register extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+
     const newUser = {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
     };
-  this.props.registerUser(newUser, this.props.history);
+
+    this.props.registerUser(newUser, this.props.history);
   };
 
   render() {

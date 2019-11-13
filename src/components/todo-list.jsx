@@ -19,25 +19,25 @@ export default class TodosList extends Component {
     }
 
   componentDidMount(prevProps) {
-    axios.get("http://localhost:4000/todos/")
+    axios.get("/todos")
         .then(response => {
             this.setState({ todos: response.data });
         })
         .catch(function (error){
-            console.log(error);
+            console.log(error.response);
         })
   }
 
 
   componentDidUpdate(prevProps) {
-  axios.get("http://localhost:4000/todos/")
+  axios.get("/todos")
       .then(response => {
         // if (this.props !== prevProps) {
           this.setState({ todos: response.data });
         // }
       })
-      .catch(function (error){
-          console.log(error);
+      .catch(error => {
+          console.log(error.response);
       })
   }
 
