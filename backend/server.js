@@ -39,6 +39,15 @@ connection.once("open", function() {
     console.log("MongoDB database connection established successfully");
 })
 
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://admin:1bkg6p8mTxep0bSd@cluster-mern-todo-dkr6n.gcp.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
 //Router
 
 todoRoutes.route("/").get(function(req, res) {
