@@ -8,7 +8,8 @@ const keys       = require("./config/keys");
 const passport   = require("passport");
 const todoRoutes = express.Router();
 const userRoutes = express.Router();
-const PORT       = process.env.PORT || 4000;
+// const PORT       = process.env.PORT || 4000;
+const http       = require('http');
 
 const validateRegisterInput = require("./validation/register");
 const validateLoginInput    = require("./validation/login");
@@ -17,8 +18,10 @@ const User = require("./models/User");
 const Todo = require("./models/Todo");
 
 const app = express();
+
 todoRoutes.options('*', cors());
 userRoutes.options('*', cors());
+
 app.use(
   bodyParser.urlencoded({
     extended: false
@@ -185,6 +188,13 @@ app.use('/todos', todoRoutes);
 app.use('/users', userRoutes);
 app.use(cors());
 
-app.listen(PORT, function() {
-    console.log("Server is running on Port: " + PORT);
+app.set('port', process.env.PORT || 4000);
+app.set('host', process.env.HOST || '0.0.0.0');
+
+http.createServer(app).listen(app.get('port'), app.get('host'), function(){
+  console.log("Express server listening on port " + app.get('port'));
 });
+
+// app.listen(PORT, function() {
+//     console.log("Server is running on Port: " + PORT);
+// });
