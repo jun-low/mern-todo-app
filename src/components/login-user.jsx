@@ -64,7 +64,7 @@ class Login extends Component {
               </h2>
               <p className="grey-text text-darken-1 pt-2">Please Login before you begin.</p>
               <p className="grey-text text-darken-1 pb-3">
-                Don't have an account? <Link to="/users/register">Signup</Link>
+                Don't have an account? <Link to="/register">Signup</Link>
               </p>
 
             </div>

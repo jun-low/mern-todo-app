@@ -29,7 +29,7 @@ if (localStorage.jwtToken) {
 
   if (decoded.exp < currentTime) {
     store.dispatch(logoutUser());
-    window.location.href = "./users/login";
+    window.location.href = "./login";
   }
 }
 
@@ -51,10 +51,10 @@ class App extends Component {
                   <Link to="/create" className="nav-link">Create Todo</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/users/register" className="nav-link">Signup</Link>
+                  <Link to="/register" className="nav-link">Signup</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/users/login" className="nav-link active hoverable">Login</Link>
+                  <Link to="/login" className="nav-link active hoverable">Login</Link>
                 </li>
               </ul>
             </div>
@@ -64,8 +64,8 @@ class App extends Component {
           <Route path="/create" component={CreateTodo} />
           <Route path="/edit/:id" component={EditTodo} />
           <Route path="/delete/:id" component={DeleteTodo} />
-          <Route path="/users/login" component={Login} />
-          <Route path="/users/register" component={Register} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
           <PrivateRoute exact path="/" component={TodosList} />
         </Router>
       </Provider>

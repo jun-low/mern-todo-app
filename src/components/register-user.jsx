@@ -63,7 +63,7 @@ class Register extends Component {
                 <b>Signup</b>
               </h4>
               <p className="grey-text text-darken-1 py-3">
-                Already have an account? <Link to="/users/login">Login</Link>
+                Already have an account? <Link to="/login">Login</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>

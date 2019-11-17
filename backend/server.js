@@ -7,7 +7,7 @@ const jwt        = require("jsonwebtoken");
 const keys       = require("./config/keys");
 const passport   = require("passport");
 const todoRoutes = express.Router();
-const userRoutes = express.Router();
+// const userRoutes = express.Router();
 // const PORT       = process.env.PORT || 4000;
 const http       = require('http');
 
@@ -20,7 +20,7 @@ const Todo = require("./models/Todo");
 const app = express();
 
 todoRoutes.options('*', cors());
-userRoutes.options('*', cors());
+// userRoutes.options('*', cors());
 
 app.use(
   bodyParser.urlencoded({
@@ -116,7 +116,7 @@ todoRoutes.route("/delete/:id").delete(function(request, response) {
     });
 });
 
-userRoutes.post("/register", (req, res) => {
+todoRoutes.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
 
   if (!isValid) {
@@ -147,7 +147,7 @@ userRoutes.post("/register", (req, res) => {
   });
 });
 
-userRoutes.post("/login", (req, res) => {
+todoRoutes.post("/login", (req, res) => {
 
   const { errors, isValid } = validateLoginInput(req.body);
 
@@ -194,7 +194,7 @@ userRoutes.post("/login", (req, res) => {
 
 
 app.use('/todos', todoRoutes);
-app.use('/users', userRoutes);
+// app.use('/users', userRoutes);
 app.use(cors());
 
 app.set('port', process.env.PORT || 4000);
